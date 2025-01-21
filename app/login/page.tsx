@@ -21,7 +21,7 @@ export default function LoginPage() {
   const  handleLogin = async () => {
     // Implement your login logic here
     console.log('Logging in with:', email, password);
-
+    router.push('/landing')
      await fetch(`https://api.vercel.app/blog`, {
       cache: 'force-cache',
     }).then((res)=>{
@@ -39,6 +39,8 @@ export default function LoginPage() {
         router.push('/landing')
     }
   }).catch((error)=>{console.error("error in catch",error)})
+
+  
     
 
     
